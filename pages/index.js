@@ -1,4 +1,5 @@
 import Layout from "./../components/Layout";
+import Card from "./../components/Card";
 
 export default function Home() {
   return (
@@ -10,6 +11,15 @@ export default function Home() {
           className="h-[65px] object-contain"
         />
       </nav>
+      <div className="mx-[100px] grid grid-cols-4 gap-10 mt-10">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </div>
     </Layout>
   );
 }

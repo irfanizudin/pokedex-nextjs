@@ -14,7 +14,7 @@ const Layout = ({ title, description, children }) => {
           rel="stylesheet"
         />
       </Head>
-      <main className="bg-white w-full min-h-screen font-inter pb-10 px-[80px]">{children}</main>
+      <main className="bg-white w-full min-h-screen font-inter pb-10 xl:px-[80px]">{children}</main>
     </>
   );
 };

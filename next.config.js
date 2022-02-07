@@ -1,6 +1,6 @@
 module.exports = {
   images: {
-    domains: ["raw.githubusercontent.com", "upload.wikimedia.org"],
+    domains: ["raw.githubusercontent.com", "github.com"],
   },
   reactStrictMode: true,
 };

@@ -5,7 +5,7 @@ const Layout = ({ title, description, children }) => {
   return (
     <>
       <Head>
-        <title>{title}</title>
+        <title className="capitalize">{title}</title>
         <meta name="description" content={description} />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />

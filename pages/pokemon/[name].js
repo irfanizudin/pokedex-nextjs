@@ -4,7 +4,10 @@ import Layout from "./../../components/Layout";
 
 const DetailPage = ({ items }) => {
   return (
-    <Layout title="Bulbasaur - Pokedex" description="Bulbasaur Pokedex Page by Irfan Izudin">
+    <Layout
+      title={`${items.name.toUpperCase()} - Pokedex`}
+      description={`${items.name} Pokedex Page by Irfan Izudin`}
+    >
       <div className="mx-[100px] grid grid-cols-1 sm:grid-cols-2 gap-10 mt-10 place-items-center">
         <Image
           src={`https://raw.githubusercontent.com/robert-z/simple-pokemon-json-api/master/public/images/${items.name}.jpg`}

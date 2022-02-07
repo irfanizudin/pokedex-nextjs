@@ -3,7 +3,7 @@ import Card from "./../components/Card";
 
 const Home = ({ items }) => {
   return (
-    <Layout title="Pokedex - Home" description="Pokedex homepage by Irfan Izudin">
+    <Layout title="Pokedex" description="Pokedex homepage by Irfan Izudin">
       <div className="mx-[100px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10 place-items-center">
         {items &&
           items.results.map((item, index) => {

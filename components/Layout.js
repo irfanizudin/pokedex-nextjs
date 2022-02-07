@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Header from "./Header";
 
 const Layout = ({ title, description, children }) => {
   return (
@@ -14,7 +15,10 @@ const Layout = ({ title, description, children }) => {
           rel="stylesheet"
         />
       </Head>
-      <main className="bg-white w-full min-h-screen font-inter pb-10 xl:px-[80px]">{children}</main>
+      <main className="bg-white w-full min-h-screen font-inter pb-10 xl:px-[80px]">
+        <Header />
+        {children}
+      </main>
     </>
   );
 };

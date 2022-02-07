@@ -12,7 +12,7 @@ const Card = ({ item }) => {
           width={150}
           className="object-contain group-hover:scale-105 duration-700"
         />
-        <h2 className="text-lg font-bold text-black">{item.name}</h2>
+        <h2 className="text-lg font-bold text-black capitalize">{item.name}</h2>
       </a>
     </Link>
   );

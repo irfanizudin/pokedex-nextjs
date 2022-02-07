@@ -4,14 +4,11 @@ import Card from "./../components/Card";
 export default function Home() {
   return (
     <Layout title="Pokedex - Home" description="Pokedex homepage by Irfan Izudin">
-      <nav className="w-full h-[80px] flex items-center justify-center">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png"
-          alt="logo-pokemon"
-          className="h-[65px] object-contain"
-        />
+      <nav className="w-full h-[200px] flex flex-col items-center justify-center">
+        <h1 className="text-3xl font-bold text-black">Pokemon Dex</h1>
+        <h4 className="text-gray mt-[10px]">Get all list pokemon do you want</h4>
       </nav>
-      <div className="mx-[100px] grid grid-cols-4 gap-10 mt-10">
+      <div className="mx-[100px] grid grid-cols-3 gap-10 mt-10">
         <Card />
         <Card />
         <Card />

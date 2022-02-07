@@ -2,7 +2,7 @@ module.exports = {
   content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      poppins: ["Poppins", "sans-serif"],
+      inter: ["Inter", "sans-serif"],
     },
     colors: {
       green: "#4DBEA6",
@@ -12,7 +12,7 @@ module.exports = {
       purple: "#7C528C",
       brown: "#B1736D",
       black: "#00060D",
-      gray: "#F6F6F6",
+      gray: "#696969",
       white: "#FFFFFF",
       "green-2": "#60E0C9",
     },

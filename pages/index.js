@@ -1,7 +1,29 @@
 import Layout from "./../components/Layout";
 import Card from "./../components/Card";
+import { useEffect, useState } from "react";
+import ButtonScrollTop from "../components/ButtonScrollTop";
 
 const Home = ({ items }) => {
+  const [showBtnScroll, setShowBtnScroll] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 300) {
+        setShowBtnScroll(true);
+      } else {
+        setShowBtnScroll(false);
+      }
+    });
+    return () => {};
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <Layout title="Pokedex" description="Pokedex homepage by Irfan Izudin">
       <div className="mx-[100px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10 place-items-center">
@@ -10,6 +32,7 @@ const Home = ({ items }) => {
             return <Card key={index} item={item} />;
           })}
       </div>
+      {showBtnScroll && <ButtonScrollTop onClick={scrollToTop} />}
     </Layout>
   );
 };

@@ -52,17 +52,7 @@ const DetailPage = ({ items }) => {
   );
 };
 
-export const getStaticPaths = async () => {
-  const res = await fetch("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=21");
-  const { results } = await res.json();
-
-  const paths = results.map((item) => {
-    return { params: { name: item.name } };
-  });
-  return { paths, fallback: false };
-};
-
-export const getStaticProps = async (context) => {
+export const getServerSideProps = async (context) => {
   const name = context.params.name;
   const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
   const items = await res.json();

@@ -16,8 +16,8 @@ const Home = ({ items }) => {
 
 export default Home;
 
-export const getStaticProps = async () => {
-  const res = await fetch("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=21");
+export const getServerSideProps = async () => {
+  const res = await fetch("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=200");
   const items = await res.json();
 
   return {

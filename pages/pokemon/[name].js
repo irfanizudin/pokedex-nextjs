@@ -1,8 +1,10 @@
 import Image from "next/image";
-import Link from "next/link";
+import { useRouter } from "next/router";
 import Layout from "./../../components/Layout";
 
 const DetailPage = ({ items }) => {
+  const router = useRouter();
+
   return (
     <Layout
       title={`${items.name.toUpperCase()} - Pokedex`}
@@ -45,9 +47,12 @@ const DetailPage = ({ items }) => {
           </p>
         </div>
       </div>
-      <Link href="/">
-        <a className="flex justify-center text-blue mt-12 hover:underline">Back to list&rarr;</a>
-      </Link>
+      <div
+        onClick={() => router.back()}
+        className="flex justify-center text-blue mt-12 hover:underline cursor-pointer"
+      >
+        Back to list&rarr;
+      </div>
     </Layout>
   );
 };
